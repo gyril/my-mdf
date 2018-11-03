@@ -7,10 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { TimetableComponent } from './timetable/timetable.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { MdfPresentationComponent } from './mdf-presentation/mdf-presentation.component';
 import { MdfFooterComponent } from './mdf-footer/mdf-footer.component';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { MdfFooterComponent } from './mdf-footer/mdf-footer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AngularSvgIconModule
+    AngularSvgIconModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

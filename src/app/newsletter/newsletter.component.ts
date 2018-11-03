@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-newsletter',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsletterComponent implements OnInit {
 
-  constructor() { }
+  public allNewsletter: any;
+  public selectedNewsletter: number;
 
-  ngOnInit() {
+  constructor(private _firebase: AngularFireDatabase) {
+  }
+
+  async ngOnInit() {
+    // Récupération des données firebase
+    this._firebase.object('/newsletter').valueChanges().subscribe(data => {
+      this.allNewsletter = data;
+
+      // On commence par la première news
+      this.selectedNewsletter = 0;
+    });
+
+
+
+  }
+
+  public next() {
+    this.selectedNewsletter = this.selectedNewsletter + 1;
+  }
+
+  public previous() {
+    this.selectedNewsletter = this.selectedNewsletter - 1;
   }
 
 }
