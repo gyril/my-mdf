@@ -1,0 +1,44 @@
+.mdf-header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #ffdfd2;
+  
+  img {
+    width: 50px;
+    vertical-align: middle;
+  }
+}
+
+.mdf-menu {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 24px;
+	cursor: pointer;
+
+	.mdf-menu-item {
+		width: 20%;
+    color: #e65834;
+    font-size: 0.8em;
+    line-height: 2em;
+		img {
+			width: 60px;
+		}
+		.color-not-selected {
+			color: #e65834;
+		}
+    svg-icon {
+      fill: #e65834;
+    }
+	}
+  .active {
+    color: #7e4057!important;
+    text-decoration: underline;
+    svg-icon {
+      fill:  #7e4057!important;
+    }
+  }
+}
+
+

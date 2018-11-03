@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+
+/******************
+*** RESET
+******************/
+html, body { height: 100%; }
+body { margin: 0; font-family: eausans_book, Roboto, "Helvetica Neue", sans-serif; }
+a { color:initial; text-decoration: initial; }
+h1, h2, h3, h4, h5 { font-family: baseninebold; }
+
+/******************
+*** HELPER
+******************/
+.mdf-align-center {
+  text-align: center;
+}
+.mdf-title-font {
+  font-family: baseninebold;
+}
+.mdf-color-purple {
+  color: #7e4057;
+}
+.mdf-color-blue {
+  color: #4590ca;
+}
+.mdf-background-color-blue {
+  background-color: #4590ca;
+}
+.mdf-background-color-orange {
+  background-color: #e65834;
+}
+.mdf-background-color-light-brown {
+  background-color: #d2cbb9;
+}
+/******************
+*** CONTAINER
+******************/
+.mdf-content-container {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/******************
+*** FONTS
+******************/
+
+@font-face {
+  font-family: 'baseninebold';
+  src: url('assets/fonts/base_nine_bold.ttf') format('ttf'),
+    url('assets/fonts/base_nine_bold.woff2') format('woff2'),
+    url('assets/fonts/base_nine_bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'eausans_book';
+    src: url('assets/fonts/eau_sans_book.ttf') format('ttf'),
+      url('assets/fonts/eau_sans_book.woff2') format('woff2'),
+      url('assets/fonts/eau_sans_book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+

@@ -1,0 +1,23 @@
+.mdf-presentation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .mdf-50 {
+    width: 50%;
+  }
+
+  .left {
+    img {
+      width: 100%;
+      margin-left: 40px;
+      margin-top: 64px;
+      margin-bottom: 64px;
+    }
+  }
+  .right {
+    font-size: 2em;
+    color: #fff;
+    padding: 60px;
+  }
+}
