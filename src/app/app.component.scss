@@ -3,10 +3,19 @@
   height: 70px;
   line-height: 70px;
   background-color: #ffdfd2;
+  position: relative;
   
   img {
     width: 50px;
     vertical-align: middle;
+  }
+
+  .logout {
+    text-decoration: underline;
+    font-size: 0.7em;
+    color: #5594c7;
+    position: absolute;
+    right: 8px;
   }
 }
 

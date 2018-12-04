@@ -1,11 +1,11 @@
 <div class="mdf-header mdf-align-center">
   <img alt="Logo Maison des femmes" src="assets/img/logo.png">
 
-  <button class="btn btn-default" (click)="logout()">LOGOUT</button>
+  <span *ngIf="showMenu" class="logout mdf-float-right mdf-cursor-pointer" (click)="logout()">Déconnexion</span>
 
 </div>
 
-<nav>
+<nav *ngIf="showMenu">
   <div class="mdf-menu mdf-align-center">
       <a routerLink="/timetable" routerLinkActive="active" class="mdf-menu-item">
         <svg-icon src="../assets/svg/timetable.svg"  [svgStyle]="{ 'width.px':40 }"></svg-icon>
