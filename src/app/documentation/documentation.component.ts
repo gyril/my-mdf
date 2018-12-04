@@ -16,9 +16,6 @@ export class DocumentationComponent implements OnInit {
     // Récupération des données firebase
     this._firebase.object('/documentation').valueChanges().subscribe(data => {
       this.allDocumentation = data;
-
-      console.log('this.allDocumentation', this.allDocumentation);
-
     });
   }
 

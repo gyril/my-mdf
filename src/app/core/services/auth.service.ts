@@ -7,7 +7,6 @@ export class AuthService {
   authState: any = null;
 
   constructor (private _firebaseAuth: AngularFireAuth) {
-    // this.user = this._firebaseAuth.authState;
     this._firebaseAuth.authState.subscribe((auth) => {
       this.authState = auth;
     });
@@ -22,7 +21,6 @@ export class AuthService {
         this.authState = value;
       })
       .catch(err => {
-        console.log('err', err);
         console.log('Something went wrong:', err.message);
       });
   }
@@ -31,7 +29,6 @@ export class AuthService {
     this._firebaseAuth
       .auth
       .signOut();
-    console.log('Déconnexion');
   }
 
   // Returns true if user is logged in
