@@ -49,8 +49,36 @@
 
 .navigation {
   background-color: #e9e9e9;
-  height: 100px;
-  line-height: 100px;
+  .next {
+    float: right;
+    height: 100px;
+    display: flex;
+    color: #e65834;
+    div {
+      line-height: 100px;
+    }
+    svg-icon {
+      stroke: #e65834;
+      margin-top: 15px;
+    }
+  }
+  .date {
+    line-height: 100px;
+    color: #7e4057;
+  }
+  .prev {
+    float: left;
+    height: 100px;
+    display: flex;
+    color: #e65834;
+    div {
+      line-height: 100px;
+    }
+    svg-icon {
+      stroke: #e65834;
+      margin-top: 15px;
+    }
+  }
 }
 
 .subtitle {

@@ -27,17 +27,22 @@
       </div>
     </div>
 
-
   </div>
 </div>
 
 
 
-<div class="navigation mdf-align-center">
+<div class="navigation mdf-align-center mdf-title-font">
 
-  <button (click)="previous()">Précédente</button>
-  <small *ngIf="allNewsletter">{{allNewsletter[selectedNewsletter].date}}</small>
-  <button (click)="next()">Suivante</button>
+  <div class="prev mdf-cursor-pointer" (click)="previous()">
+    <div><svg-icon src="assets/svg/arrow-prev.svg"  [svgStyle]="{ 'width.px':70 }"></svg-icon></div>
+    <div>Précédente</div>
+  </div>
+  <small class="date" *ngIf="allNewsletter">{{allNewsletter[selectedNewsletter].date}}</small>
+  <div class="next mdf-cursor-pointer" (click)="next()">
+    <div>Suivante</div>
+    <div><svg-icon src="assets/svg/arrow-next.svg"  [svgStyle]="{ 'width.px':70 }"></svg-icon></div>
+  </div>
 </div>
 
 
