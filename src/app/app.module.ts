@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,11 @@ import { MdfFooterComponent } from './mdf-footer/mdf-footer.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './core/services/auth.service';
+import { AuthGuard } from './core/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -23,10 +28,12 @@ import { environment } from '../environments/environment';
     DocumentationComponent,
     TimetableComponent,
     MdfPresentationComponent,
-    MdfFooterComponent
+    MdfFooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -34,7 +41,7 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

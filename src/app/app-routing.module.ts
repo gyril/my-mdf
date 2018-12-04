@@ -3,20 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import {NewsletterComponent} from './newsletter/newsletter.component';
 import {DocumentationComponent} from './documentation/documentation.component';
 import {TimetableComponent} from './timetable/timetable.component';
+import {LoginComponent} from './login/login.component';
+import {AuthGuard} from './core/guards/auth.guard';
 
 const routes: Routes = [
-	{
-		path: 'newsletter',
-		component: NewsletterComponent
-	},
-	{
-		path: 'documentation',
-		component: DocumentationComponent
-	},
-	{
-		path: 'timetable',
-		component: TimetableComponent
-	}
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'newsletter', component: NewsletterComponent, canActivate: [AuthGuard] },
+  { path: 'documentation', component: DocumentationComponent, canActivate: [AuthGuard] },
+  { path: 'timetable', component: TimetableComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
