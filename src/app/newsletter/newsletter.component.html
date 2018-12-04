@@ -1,7 +1,7 @@
 
 <div class="mdf-content-container">
   <h1 class="mdf-color-purple">
-    Newsletter
+    Notre Newsletter
   </h1>
   <div class="subtitle">
     <small *ngIf="allNewsletter">{{allNewsletter[selectedNewsletter].date}}</small>
@@ -14,13 +14,13 @@
        class="mdf-content-container" [ngClass]="[item.css, item.color]">
     <div *ngIf="item.type === 'text'">
       <h2 class="title">{{item.content.title}}</h2>
-      <p>{{item.content.text}}</p>
+      <p class="description">{{item.content.text}}</p>
     </div>
 
     <div *ngIf="item.type === 'text-image'" class="mdf-row">
       <div class="mdf-item-50">
         <h2 class="title">{{item.content.title}}</h2>
-        <p>{{item.content.text}}</p>
+        <p class="description">{{item.content.text}}</p>
       </div>
       <div class="mdf-item-50">
         <img src="{{item.content.image}}">

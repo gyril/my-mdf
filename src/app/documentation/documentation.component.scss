@@ -11,9 +11,15 @@
     padding-left: 16px;
     padding-bottom: 16px;
 
+
     .title {
       color: #fff;
-      font-size: 1.2em;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+    .description {
+      font-size: 0.9em;
+      line-height: 1.2em;
     }
     .image-container {
       img {
@@ -21,17 +27,35 @@
       }
     }
 
-    .btn-see {
+    .action {
       margin-top: 8px;
       margin-bottom: 8px;
+      display: flex;
+    }
+
+    .btn-print {
+      background-color: #fff;
+      color: #7e4057;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 8px;
+      svg-icon {
+        fill:  #7e4057!important;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    .btn-see {
       padding-left: 2em;
       padding-right: 2em;
       font-size: 0.8em;
-      height: 3em;
-      line-height: 3em;
+      height: 40px;
+      line-height: 40px;
       border-radius: 28px;
       background-color: #fff;
-      color: #8f3e5e;
+      color: #7e4057;
       text-align: center;
     }
   }

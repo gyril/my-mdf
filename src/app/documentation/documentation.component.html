@@ -10,12 +10,18 @@
 
       <div class="image-container"><img src="{{item.image}}"></div>
       <h2 class="title">{{item.title}}</h2>
-      <p>{{item.description}}</p>
+      <p class="description">{{item.description}}</p>
 
-      <a href="{{item.pdf}}" target="_blank">
-        <div class="btn-see mdf-title-font mdf-cursor-pointer">Consulter</div>
-      </a>
-
+      <div class="action">
+        <a href="{{item.pdf}}" target="_blank">
+          <div class="btn-print mdf-cursor-pointer">
+            <svg-icon src="assets/svg/printer.svg"  [svgStyle]="{ 'width.px':20 }"></svg-icon>
+          </div>
+        </a>
+        <a href="{{item.pdf}}" target="_blank">
+          <div class="btn-see mdf-title-font mdf-cursor-pointer">Consulter</div>
+        </a>
+      </div>
 
     </div>
 
