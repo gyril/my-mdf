@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       await this.authService.login(value.email, value.password);
 
       if (await this.authService.authenticated) {
-        this._router.navigate(['/newsletter']);
+        this._router.navigate(['newsletter']);
       }
     }
   }

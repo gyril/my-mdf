@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
   public async logout() {
     await this._authService.logout();
 
-    this._router.navigate(['/login']);
+    this._router.navigate(['login']);
 
   }
 
