@@ -22,10 +22,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   public async onLogin(value) {
-    await this.authService.login(value.email, value.password);
-    // this.me = this.authService.currentUser;
-    if (await this.authService.authenticated) {
-      this._router.navigate(['/newsletter']);
+    if (this.loginForm.valid) {
+      await this.authService.login(value.email, value.password);
+
+      if (await this.authService.authenticated) {
+        this._router.navigate(['/newsletter']);
+      }
     }
   }
 

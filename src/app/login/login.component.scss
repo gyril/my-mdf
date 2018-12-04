@@ -1,3 +1,36 @@
+
 .form-container {
-  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .label {
+    font-size: 1em;
+    color: #e65834;
+    text-align: left;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    &.password {
+      margin-top: 16px;
+    }
+  }
+
+  input {
+    height: 2em;
+    line-height: 2em;
+    width: 200px;
+  }
+}
+
+.btn-submit {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 0.8em;
+  height: 3em;
+  line-height: 3em;
+  border-radius: 28px;
+  background-color: #5594c7;
+  color: #fff;
 }
