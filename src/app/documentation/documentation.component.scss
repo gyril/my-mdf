@@ -1,0 +1,38 @@
+.documentation-container {
+  background-color: #84b4b6;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .a-documentation {
+    width: 184px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+
+    .title {
+      color: #fff;
+      font-size: 1.2em;
+    }
+    .image-container {
+      img {
+        width: 100%;
+      }
+    }
+
+    .btn-see {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding-left: 2em;
+      padding-right: 2em;
+      font-size: 0.8em;
+      height: 3em;
+      line-height: 3em;
+      border-radius: 28px;
+      background-color: #fff;
+      color: #8f3e5e;
+      text-align: center;
+    }
+  }
+}
